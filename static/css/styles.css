@@ -1,0 +1,236 @@
+/* Определение переменных для цветов */
+:root {
+    --primary-color: #1e3c72; /* Основной цвет */
+    --secondary-color: #2a4d69; /* Вторичный цвет */
+    --background-color: #f0f8ff; /* Цвет фона */
+    --text-color: #2a4d69; /* Цвет текста */
+    --hover-color: #b3cde0; /* Цвет при наведении */
+    --card-background-color: #fff; /* Цвет фона карточек */
+}
+
+/* Основные стили для body */
+body {
+    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Стили для контейнера */
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для логотипа в навигационной панели */
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Стили для списка навигации */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для ссылок в навигационной панели */
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Стили при наведении на ссылки в навигационной панели */
+.navbar-nav .nav-link:hover {
+    color: var(--hover-color);
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 24px;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили при наведении и фокусе на кнопке */
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-color);
+}
+
+/* Стили для списков */
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Стили при наведении и фокусе на ссылках */
+a:hover,
+a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Стили для карточек */
+.card {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Стили для заголовка карточек */
+.card-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Стили для тела карточек */
+.card-body {
+    padding: 20px;
+}
+
+/* Стили для заголовка в карточках */
+.card-title {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стили для текста в карточках */
+.card-text {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Стили для muted текста */
+.text-muted {
+    color: #4a6d8c !important;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Стили для изображений */
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для групп форм */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стили для элементов управления формами */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Стили при фокусе на элементах управления формами */
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Стили для таблиц */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Стили для ячеек таблиц */
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Стили для заголовков таблиц */
+.table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Адаптивные стили для экранов шириной до 768px */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+    }
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+    .container {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+<div class="mt-4">
+    {% for image_url in image_urls %}
+        <img src="{{ image_url }}" class="img-fluid mb-4" alt="PDF page">
+    {% endfor %}
+</div>
+<div class="mt-4">
+    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Вернуться назад</a>
+    <a href="{{ pdf_url }}" class="btn btn-primary" download>Скачать PDF</a>
+</div>
+
+{% endblock %}

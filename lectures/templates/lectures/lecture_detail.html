@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}{{ lecture.title }}{% endblock %}
+
+{% block content %}
+<div class="card mt-5">
+    <div class="card-header bg-primary text-white">
+        <h2>{{ lecture.title }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="card-text">{{ lecture.content|replace_images:lecture.images|safe }}</div>
+    </div>
+</div>
+<a href="{% url 'lecture_list' %}" class="btn btn-primary mt-3">Назад к лекциям</a>
+{% endblock %}

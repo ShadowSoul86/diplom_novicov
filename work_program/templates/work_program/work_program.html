@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block title %}Рабочая программа{% endblock %}
+
+{% block content %}
+<h1>Рабочая программа</h1>
+<ul class="list-group">
+    <li class="list-group-item">
+        <a href="{% url 'pdf_view' 'fos' %}">ФОС</a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url 'pdf_view' 'work_program' %}">Рабочая программа настройки и обеспечение функционирования программных средств и компьютерных систем и комплексов</a>
+    </li>
+</ul>
+{% endblock %}

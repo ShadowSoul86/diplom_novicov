@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Начало теста{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">{{ test.title }}</h2>
+    <p class="text-center">{{ test.description }}</p>
+    <form method="post" action="" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.name.label_tag }}
+            {{ form.name }}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Начать тест</button>
+    </form>
+</div>
+{% endblock %}
