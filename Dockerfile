@@ -17,5 +17,5 @@ RUN pip --no-cache-dir install --upgrade pip setuptools \
 
 COPY . /opt/app/
 RUN python manage.py collectstatic --noinput
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "--timeout", "180", "--workers", "3", "config.wsgi:application"]
+CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "--timeout", "180", "--workers", "3", "myproject.wsgi:application"]
 EXPOSE 8000
